@@ -1,0 +1,46 @@
+public class SignedText
+{
+    private String f;
+    private String l;
+
+    public SignedText(String first, String last)
+    {
+        f = first;
+        l = last;
+    }
+
+    public String getSignature()
+    {
+        String text = "";
+
+        if (f.equals(""))
+        {
+            text = l;
+        }
+
+        else 
+        {
+            text = l.substring(0, 1) + "-" + f;
+        }
+
+        return text;
+    }
+
+    public String addSignature(String text)
+    {
+        if (text.indexOf(getSignature()) == -1)
+        {
+            return text + getSignature();
+        }
+
+        else if (text.indexOf(getSignature()) == 0)
+        {
+            return text.substring(getSignature().length());
+        }
+
+        else
+        {
+            return text;
+        }
+    }
+}
