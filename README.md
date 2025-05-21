@@ -1,2 +1,2 @@
 # AP-FRQS-CSA
-##Solution by Bintao Chi
+Solution by Bintao Chi
